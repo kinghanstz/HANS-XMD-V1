@@ -8,7 +8,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "s": "node index.js", 
-    "keith": "pm2 start index.js --attach --max-memory-restart 490M",
+    "HansTz": "pm2 start index.js --attach --max-memory-restart 490M",
     "hans": "pm2 start hans.js --attach",
     "c": "tsc"
     },
