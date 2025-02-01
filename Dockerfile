@@ -10,8 +10,8 @@ RUN apt-get update && \
   npm i pm2 -g && \
   rm -rf /var/lib/apt/lists/*
   
-RUN git clone https://github.com/devhanstz/HANS-MD-V2 /root/alpha_Bot
-WORKDIR /root/alpha_Bot/
+RUN git clone https://github.com/devhanstz/HANS-MD-V2 /root/HANS-MD
+WORKDIR /root/HANS-MD/
 
 
 COPY package.json .
