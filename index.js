@@ -209,7 +209,7 @@ if (conf.AUTOBIO === 'yes') {
     setInterval(() => {
       const date = new Date();
       zk.updateProfileStatus(
-        `${conf.OWNER_NAME} is active 24/7 ${date.toLocaleString('en-US', { timeZone: 'Africa/Nairobi' })} It's a ${date.toLocaleString('en-US', { weekday: 'long', timeZone: 'Africa/Nairobi' })}.`
+        `🤖HANS-MD-AND-MY-OWENER😊${conf.OWNER_NAME} IS ACTIVE 24/7 ${date.toLocaleString('en-US', { timeZone: 'Africa/Dodoma' })} It's a ${date.toLocaleString('en-US', { weekday: 'long', timeZone: 'Africa/Dodoma' })}.`
       );
     }, 10 * 1000);
   }
@@ -258,9 +258,9 @@ zk.ev.on("messages.upsert", async (m) => {
     // Function to format notification message
 function createNotification(deletedMessage) {
   const deletedBy = deletedMessage.key.participant || deletedMessage.key.remoteJid;
-  let notification = `*🎃HANS ANTIDELETE🎃*\n\n`;
-  notification += `*Time deleted🥀:* ${new Date().toLocaleString()}\n`;
-  notification += `*Deleted by🌷:* @${deletedBy.split('@')[0]}\n\n*Powered by HansTz*\n\n`;
+  let notification = `*🎃HANS-MD ANTIDELETE🎃*\n\n`;
+  notification +=   `*TIME DELETEd🤦‍♂️:* ${new Date().toLocaleString()}\n`;
+  notification +=   `*DELETED BY⌚:* @${deletedBy.split('@')[0]}\n\n   *POWERED BY HANSTZ*\n\n`;
   return notification;
 }
 
@@ -373,9 +373,9 @@ zk.ev.on("messages.upsert", async m => {
       // Function to format notification message
 function createNotification(deletedMessage) {
   const deletedBy = deletedMessage.key.participant || deletedMessage.key.remoteJid;
-  let notification = `*🎃HANS ANTIDELETE🎃*\n\n`;
-  notification += `*Time deleted🥀:* ${new Date().toLocaleString()}\n`;
-  notification += `*Deleted by🌷:* @${deletedBy.split('@')[0]}\n\n*Powered by HansTz*\n\n`;
+  let notification = `*🎃HANS-MD ANTIDELETE🎃*\n\n`;
+  notification +=   `*TIME DELETED⌚:* ${new Date().toLocaleString()}\n`;
+  notification +=   `*DELETED BY🤦‍♂️:* @${deletedBy.split('@')[0]}\n\n   *POWERED BY HANSTZ*\n\n`;
   return notification;
 }
 
@@ -1315,7 +1315,7 @@ if (texte && texte.startsWith('>')) {
                 caption: "Hello, it's time to close the group; sayonara."
               });
             }, {
-              timezone: "Africa/Nairobi"
+              timezone: "Africa/Dodoma"
             });
           }
           if (crons[i].unmute_at != null) {
@@ -1330,7 +1330,7 @@ if (texte && texte.startsWith('>')) {
                 caption: "Good morning; It's time to open the group."
               });
             }, {
-              timezone: "Africa/Nairobi"
+              timezone: "Africa/Dodoma"
             });
           }
         }
@@ -1402,7 +1402,7 @@ if (texte && texte.startsWith('>')) {
         console.log("Hans md successfully connected✅");
         await activateCrons();
 const getGreeting = () => {
-        const currentHour = DateTime.now().setZone('Africa/Nairobi').hour;
+        const currentHour = DateTime.now().setZone('Africa/Dodoma').hour;
 
         if (currentHour >= 5 && currentHour < 12) {
           return 'Good morning 🌄';
@@ -1416,18 +1416,20 @@ const getGreeting = () => {
         };
 
 
-        const getCurrentTimeInNairobi = () => {
-            return DateTime.now().setZone('Africa/Nairobi').toLocaleString(DateTime.TIME_SIMPLE);
+        const getCurrentTimeInDodoma = () => {
+            return DateTime.now().setZone('Africa/Dodoma').toLocaleString(DateTime.TIME_SIMPLE);
         };
 
         if (conf.DP.toLowerCase() === 'yes') {
           await zk.sendMessage(zk.user.id, {
             text: `
 ╭═════════════════⊷
-║    *Hello👋, ${getGreeting()},*
+║     *Hello👋, ${getGreeting()},*
 ║═════════════════⊷
-║  *『 ${conf.BOT} 𝐢𝐬 𝐎𝐧𝐥𝐢𝐧𝐞』*
-║ Creator: *${conf.OWNER_NAME}*
+║    *『 HANS-MD 𝐢𝐬 𝐎𝐧𝐥𝐢𝐧𝐞』*
+║═════════════════⊷
+║═════════════════⊷
+║ User: *${conf.OWNER_NAME}*
 ║ Prefix : [  ${prefixe} ]
 ║ Mode : ${md} mode
 ║ Total Commands : ${evt.cm.length}
