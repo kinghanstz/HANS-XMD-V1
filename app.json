@@ -23,7 +23,12 @@
       "required": false
     },
     "GREET": {
-      "description": "when enabled it automatically sends  greeting message to members in your pm",
+      "description": "when enabled it automatically detect and delete any links yes to enable and no to disable",
+      "value": "no",
+      "required": false
+    },
+    "ANTILINK": {
+      "description": "when enabled it automatically detect and delete any links yes to enable and no to disable",
       "value": "no",
       "required": false
     },
