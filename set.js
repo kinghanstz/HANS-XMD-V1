@@ -26,7 +26,7 @@ module.exports = { session: process.env.SESSION_ID || 'king',
     AUTO_STATUS_MSG: process.env.AUTO_STATUS_MSG || 'viewed by hans md',   
     AUTO_STATUS_REPLY: process.env.AUTO_STATUS_REPLY || 'no',
     AUTOBIO: process.env.AUTOBIO || 'yes',    
-    ANTILINK = process.env.ANTILINK || "no";   
+    ANTILINK : process.env.ANTILINK || "yes",
     ANTICALL_MSG : process.env.ANTICALL_MESSAGE || '',             
     GURL: process.env.GURL  || "https://whatsapp.com/channel/0029VacQFw65Ui2gGv0Kwk1r",
     WEBSITE :process.env.GURL || "https://whatsapp.com/channel/0029VacQFw65Ui2gGv0Kwk1r",
