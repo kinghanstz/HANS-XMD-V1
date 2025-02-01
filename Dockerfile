@@ -17,6 +17,7 @@ WORKDIR /root/HANS-MD/
 COPY package.json .
 RUN npm install pm2 -g
 RUN npm install --legacy-peer-deps
+RUN npm install axios dotenv
 
 COPY . .
 
