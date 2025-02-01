@@ -1,14 +1,14 @@
 {
-  "name": "ALPHA-MD",
-  "description": "Alpha is a multidevice WhatsApp bot built to make your WhatsApp enjoyable...",
+  "name": "HANS-MD",
+  "description": "Hans is a multidevice WhatsApp bot built to make your WhatsApp enjoyable...",
   "keywords": [
     "bot",
     "node",
     "baileys",
     "whatsapp"
   ],
-  "logo": "https://telegra.ph/file/b148f6ed21fa02ac5325b.jpg",
-  "repository": "https://github.com/Keithkeizzah/ALPHA-MD",
+  "logo": "https://files.catbox.moe/9mcdru.jpg",
+  "repository": "https://github.com/devhanstz/HANS-MD-V2",
   "succes_url": "/",
   "stack": "container",
   "env": {
@@ -49,7 +49,7 @@
     },
     "AUTO_STATUS_MSG": {
       "description": "type your genuine status message",
-      "value": "viewed ✅✅",
+      "value": "VIEWED ✅ BY HANS-XMD",
       "required": false
     },
     "AUTO_STATUS_REPLY": {
@@ -64,7 +64,7 @@
     },
     "BOT_NAME": {
       "description": "you must give a name for you bot uhh??!!",
-      "value": "",
+      "value": "HANS-XMD",
       "required": false 
     },
     "GROUP_CONTROL": {
@@ -94,12 +94,12 @@
     },
     "OWNER_NAME": {
       "description": "don't you have a name bro.Insert your name here!!",
-      "value": "",
+      "value": "HansTz",
       "required": false
     },
     "URL": {
       "description": "you must add your bot image url.Get your image url now and fill it here",
-      "value": "",
+      "value": "https://files.catbox.moe/9mcdru.jpg",
       "required": true
     },
     "AUTO_READ_MESSAGES": {
@@ -108,8 +108,8 @@
       "required": false  
     },
     "NUMERO_OWNER": {
-      "description": "Your phone number (exclude '+' and area code, e.g., '254796299159')",
-      "value": "254796299159",
+      "description": "Your phone number (exclude '+' and area code, e.g., '255659747717')",
+      "value": "255659747717",
       "required": false
     },
     "WARN_COUNT": {

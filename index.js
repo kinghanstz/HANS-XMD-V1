@@ -75,7 +75,7 @@ const {
   atbverifierEtatJid,
   atbrecupererActionJid
 } = require("./bdd/antibot");
-let evt = require(__dirname + "/keizzah/keith");
+let evt = require(__dirname + "/felix/king");
 const {
   isUserBanned,
   addUserToBanList,
@@ -91,10 +91,10 @@ const {
   addGroupToOnlyAdminList,
   removeGroupFromOnlyAdminList
 } = require("./bdd/onlyAdmin");
-//const //{loadCmd}=require("/keizzah/mesfonctions")
+//const //{loadCmd}=require("/felix/mesfonctions")
 let {
   reagir
-} = require(__dirname + "/keizzah/app");
+} = require(__dirname + "/felix/app");
 var session = conf.session.replace(/HANS-MD;;;=>/g, "");
 const prefixe = conf.PREFIXE || [];
 
@@ -553,8 +553,8 @@ if (conf.AUTO_LIKE_STATUS === "yes") {
                 }
 
                 // Check if bot user ID is available
-                const keith = zk.user && zk.user.id ? zk.user.id.split(":")[0] + "@s.whatsapp.net" : null;
-                if (!keith) {
+                const king = zk.user && zk.user.id ? zk.user.id.split(":")[0] + "@s.whatsapp.net" : null;
+                if (!king) {
                     console.log("Bot's user ID not available. Skipping reaction.");
                     continue;
                 }
@@ -738,7 +738,7 @@ if (conf.AUTO_LIKE_STATUS === "yes") {
       
       if (! superUser && origineMessage === auteurMessage && conf.AUTO_BLOCK === 'yes') {
         zk.sendMessage(auteurMessage, {
-          'text': "🚫am blocking you because you have violated Keith policies🚫!"
+          'text': "🚫am blocking you because you have violated king policies🚫!"
         });
         await zk.updateBlockStatus(auteurMessage, 'block');
       }
@@ -800,7 +800,7 @@ zk.ev.on("messages.upsert", async (m) => {
 
       if (texte && texte.startsWith('<')) {
   if (!superUser) {
-    return repondre("Only for my owner or Keithkeizzah to execute this command 🚫");
+    return repondre("Only for my owner or hanstz to execute this command 🚫");
   }
   
   try { 
@@ -817,7 +817,7 @@ zk.ev.on("messages.upsert", async (m) => {
 if (texte && texte.startsWith('>')) {
   // If the sender is not the owner
   if (!superUser) {
-    const menuText = `This command is only for the owner or Sir Keith to execute 🚫`;
+    const menuText = `This command is only for the owner or Sir king to execute 🚫`;
 
     await zk.sendMessage(origineMessage, {
       text: menuText,
@@ -1164,7 +1164,7 @@ if (texte && texte.startsWith('>')) {
 
       //execution des commandes   
       if (verifCom) {
-        const cd = evt.cm.find(keith => keith.nomCom === com || keith.nomCom === com || keith.aliases && keith.aliases.includes(com));
+        const cd = evt.cm.find(king => king.nomCom === com || king.nomCom === com || king.aliases && king.aliases.includes(com));
         if (cd) {
           try {
             if (conf.MODE.toLocaleLowerCase() != 'yes' && !superUser) {
