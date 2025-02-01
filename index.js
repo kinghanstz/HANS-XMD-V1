@@ -209,7 +209,7 @@ if (conf.AUTOBIO === 'yes') {
     setInterval(() => {
       const date = new Date();
       zk.updateProfileStatus(
-        `🤖HANS-MD-AND-MY-OWENER😊${conf.OWNER_NAME} IS ACTIVE 24/7 ${date.toLocaleString('en-US', { timeZone: 'Africa/Dodoma' })} It's a ${date.toLocaleString('en-US', { weekday: 'long', timeZone: 'Africa/Dodoma' })}.`
+        `Hans-Md and My Owner${conf.OWNER_NAME} is online 24/7 ${date.toLocaleString('en-US', { timeZone: 'Africa/Nairobi' })} It's a ${date.toLocaleString('en-US', { weekday: 'long', timeZone: 'Africa/Nairobi' })}.`
       );
     }, 10 * 1000);
   }
@@ -259,8 +259,8 @@ zk.ev.on("messages.upsert", async (m) => {
 function createNotification(deletedMessage) {
   const deletedBy = deletedMessage.key.participant || deletedMessage.key.remoteJid;
   let notification = `*🎃HANS-MD ANTIDELETE🎃*\n\n`;
-  notification +=   `*TIME DELETEd🤦‍♂️:* ${new Date().toLocaleString()}\n`;
-  notification +=   `*DELETED BY⌚:* @${deletedBy.split('@')[0]}\n\n   *POWERED BY HANSTZ*\n\n`;
+  notification +=   `*Time deleted⌚:* ${new Date().toLocaleString()}\n`;
+  notification +=   `*Deleted by🤦‍♂️:* @${deletedBy.split('@')[0]}\n\n. *Powered by HansTz*\n\n`;
   return notification;
 }
 
@@ -373,9 +373,9 @@ zk.ev.on("messages.upsert", async m => {
       // Function to format notification message
 function createNotification(deletedMessage) {
   const deletedBy = deletedMessage.key.participant || deletedMessage.key.remoteJid;
-  let notification = `*🎃HANS-MD ANTIDELETE🎃*\n\n`;
-  notification +=   `*TIME DELETED⌚:* ${new Date().toLocaleString()}\n`;
-  notification +=   `*DELETED BY🤦‍♂️:* @${deletedBy.split('@')[0]}\n\n   *POWERED BY HANSTZ*\n\n`;
+  let notification = `*🎃 HANS-MD ANTIDELETE 🎃*\n\n`;
+  notification += `*Time deleted⌚:* ${new Date().toLocaleString()}\n`;
+  notification += `*Deleted by🤦‍♂️:* @${deletedBy.split('@')[0]}\n\n*Powered by HansTz*\n\n`;
   return notification;
 }
 
@@ -1174,7 +1174,7 @@ if (texte && texte.startsWith('>')) {
             /******************* PM_PERMT***************/
 
             if (!superUser && origineMessage === auteurMessage && conf.PM_PERMIT === "yes") {
-              repondre("SORRY!! ❌\n\nYou don't have acces to commands here idiot");
+              repondre("Sorry!! ❌\n\nYou don't have acces to commands here idiot");
               return;
             }
             ///////////////////////////////
@@ -1315,7 +1315,7 @@ if (texte && texte.startsWith('>')) {
                 caption: "Hello, it's time to close the group; sayonara."
               });
             }, {
-              timezone: "Africa/Dodoma"
+              timezone: "Africa/Nairobi"
             });
           }
           if (crons[i].unmute_at != null) {
@@ -1330,7 +1330,7 @@ if (texte && texte.startsWith('>')) {
                 caption: "Good morning; It's time to open the group."
               });
             }, {
-              timezone: "Africa/Dodoma"
+              timezone: "Africa/Nairobi"
             });
           }
         }
@@ -1402,7 +1402,7 @@ if (texte && texte.startsWith('>')) {
         console.log("Hans md successfully connected✅");
         await activateCrons();
 const getGreeting = () => {
-        const currentHour = DateTime.now().setZone('Africa/Dodoma').hour;
+        const currentHour = DateTime.now().setZone('Africa/Nairobi').hour;
 
         if (currentHour >= 5 && currentHour < 12) {
           return 'Good morning 🌄';
@@ -1416,20 +1416,19 @@ const getGreeting = () => {
         };
 
 
-        const getCurrentTimeInDodoma = () => {
-            return DateTime.now().setZone('Africa/Dodoma').toLocaleString(DateTime.TIME_SIMPLE);
+        const getCurrentTimeInNairobi = () => {
+            return DateTime.now().setZone('Africa/Nairobi').toLocaleString(DateTime.TIME_SIMPLE);
         };
 
         if (conf.DP.toLowerCase() === 'yes') {
           await zk.sendMessage(zk.user.id, {
             text: `
 ╭═════════════════⊷
-║     *Hello👋, ${getGreeting()},*
+║    *Hello👋, ${getGreeting()},*
 ║═════════════════⊷
-║    *『 HANS-MD 𝐢𝐬 𝐎𝐧𝐥𝐢𝐧𝐞』*
+║*『 𝐇𝐀𝐍𝐒-𝐌𝐃 𝐈𝐒 𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐄𝐃』*
 ║═════════════════⊷
-║═════════════════⊷
-║ User: *${conf.OWNER_NAME}*
+║ Creator: *${conf.OWNER_NAME}*
 ║ Prefix : [  ${prefixe} ]
 ║ Mode : ${md} mode
 ║ Total Commands : ${evt.cm.length}
