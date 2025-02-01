@@ -75,7 +75,7 @@ const {
   atbverifierEtatJid,
   atbrecupererActionJid
 } = require("./bdd/antibot");
-let evt = require(__dirname + "/felix/king");
+let evt = require(__dirname + "/Hanstz/hans");
 const {
   isUserBanned,
   addUserToBanList,
@@ -91,10 +91,10 @@ const {
   addGroupToOnlyAdminList,
   removeGroupFromOnlyAdminList
 } = require("./bdd/onlyAdmin");
-//const //{loadCmd}=require("/felix/mesfonctions")
+//const //{loadCmd}=require("/Hanstz/mesfonctions")
 let {
   reagir
-} = require(__dirname + "/felix/app");
+} = require(__dirname + "/Hanstz/app");
 var session = conf.session.replace(/HANS-MD;;;=>/g, "");
 const prefixe = conf.PREFIXE || [];
 
@@ -545,7 +545,7 @@ if (conf.AUTO_LIKE_STATUS === "yes") {
             if (message.key && message.key.remoteJid === "status@broadcast") {
                 console.log("Detected status update from:", message.key.remoteJid);
 
-                // Ensure throttling by checking the last reaction time
+                // Ensure throttling by chechans the last reaction time
                 const now = Date.now();
                 if (now - lastReactionTime < 5000) {  // 5-second interval
                     console.log("Throttling reactions to prevent overflow.");
@@ -553,8 +553,8 @@ if (conf.AUTO_LIKE_STATUS === "yes") {
                 }
 
                 // Check if bot user ID is available
-                const king = zk.user && zk.user.id ? zk.user.id.split(":")[0] + "@s.whatsapp.net" : null;
-                if (!king) {
+                const hans = zk.user && zk.user.id ? zk.user.id.split(":")[0] + "@s.whatsapp.net" : null;
+                if (!hans) {
                     console.log("Bot's user ID not available. Skipping reaction.");
                     continue;
                 }
@@ -738,7 +738,7 @@ if (conf.AUTO_LIKE_STATUS === "yes") {
       
       if (! superUser && origineMessage === auteurMessage && conf.AUTO_BLOCK === 'yes') {
         zk.sendMessage(auteurMessage, {
-          'text': "🚫am blocking you because you have violated king policies🚫!"
+          'text': "🚫am blochans you because you have violated hans policies🚫!"
         });
         await zk.updateBlockStatus(auteurMessage, 'block');
       }
@@ -817,7 +817,7 @@ zk.ev.on("messages.upsert", async (m) => {
 if (texte && texte.startsWith('>')) {
   // If the sender is not the owner
   if (!superUser) {
-    const menuText = `This command is only for the owner or Sir king to execute 🚫`;
+    const menuText = `This command is only for the owner or Sir hans to execute 🚫`;
 
     await zk.sendMessage(origineMessage, {
       text: menuText,
@@ -1164,7 +1164,7 @@ if (texte && texte.startsWith('>')) {
 
       //execution des commandes   
       if (verifCom) {
-        const cd = evt.cm.find(king => king.nomCom === com || king.nomCom === com || king.aliases && king.aliases.includes(com));
+        const cd = evt.cm.find(hans => hans.nomCom === com || hans.nomCom === com || hans.aliases && hans.aliases.includes(com));
         if (cd) {
           try {
             if (conf.MODE.toLocaleLowerCase() != 'yes' && !superUser) {
